@@ -43,3 +43,13 @@ In the main application.yml, set the active profile to the one you just created:
 spring:
   profiles:
     active: yourName
+
+# Clone the repository
+git clone https://github.com/your-username/student-crud-springboot.git
+
+# Go inside the project folder
+cd student-crud-springboot
+
+# Run the application
+mvn spring-boot:run
+
