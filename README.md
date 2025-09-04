@@ -21,7 +21,8 @@ To run this project, you’ll need:
 1. Open MySQL and create a database called **jpa**:
    ```sql
    CREATE DATABASE jpa;
-   <--create application-yourName.yml and add the following configurations and in the main application.yml choose the active profile to the .yml that you created
+Inside src/main/resources/, create a new file named application-yourName.yml and add the following configuration
+(replace your_mysql_username and your_mysql_password with your actual credentials):
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/jpa
@@ -36,3 +37,9 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+In the main application.yml, set the active profile to the one you just created:
+
+spring:
+  profiles:
+    active: yourName
